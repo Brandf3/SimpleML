@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import filedialog
 import random
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics import accuracy_score
@@ -37,6 +38,10 @@ class ModelWindow:
         y_predicted = clf.predict(X_test)
         
         print("Accuracy: %.2f" % accuracy_score(y_test,y_predicted))
+
+    def fileChooser(event):
+        #dataEntry = filedialog.askopenfilename(initialdir = "/", title = "Select file", filetypes = ("test", "*.csv"))
+        dataEntry.insert(0, filedialog.askopenfilename(filetypes = [("Comma separated values", "*.csv")]))
         
     def NBForm():
         ModelWindow.clearFrame()
@@ -49,6 +54,10 @@ class ModelWindow:
         dataEntry = tk.Entry(innerFrame1)
         dataEntry.pack(side=tk.RIGHT)
         innerFrame1.pack()
+
+        btnFile = tk.Button(innerFrame1, text="...")
+        btnFile.pack()
+        btnFile.bind("<Button-1>", ModelWindow.fileChooser)
 
         innerFrame2 = tk.Frame(frame)
         text2 = tk.Label(innerFrame2, text="Variable to predict: ")
