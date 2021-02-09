@@ -130,3 +130,7 @@ dmypy.json
 
 # Testing data
 *.csv
+
+# Saved models
+*.pkl
+*.h5
