@@ -13,7 +13,7 @@ class Segmentor(TextPreprocess):
     def run(self, event):
         wordsegment.load()
         file = open(self.dataEntry.get(), 'r')
-        out = open('segmented.txt', 'w')
+        out = open(self.savefile.get(), 'w')
         for line in file:
             line.strip()
             lineSplit = str.split(line)
