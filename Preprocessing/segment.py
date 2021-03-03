@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
 
-from textpreprocess import TextPreprocess
+from Preprocessing.textpreprocess import TextPreprocess
 import pandas as pd
 import wordsegment
 

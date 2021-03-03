@@ -2,8 +2,8 @@ import tkinter as tk
 from tkinter import filedialog
 from naivebayes import NaiveBayes
 from svm import SVM
-from segment import Segmentor
-from labeltovalue import LabelToValue
+from Preprocessing.segment import Segmentor
+from Preprocessing.labeltovalue import LabelToValue
 
 class ModelWindow:
         
