@@ -3,6 +3,7 @@ from tkinter import filedialog
 from naivebayes import NaiveBayes
 from svm import SVM
 from segment import Segmentor
+from labeltovalue import LabelToValue
 
 class ModelWindow:
         
@@ -14,6 +15,9 @@ class ModelWindow:
 
     def segment():
         Segmentor(frame)
+
+    def labeltovalue():
+        LabelToValue(frame)
     
     def openNewWindow(main):
         newWindow = tk.Toplevel(main)
@@ -26,6 +30,7 @@ class ModelWindow:
 
         modelmenu2 = tk.Menu(menubar, tearoff=0)
         modelmenu2.add_command(label="Hashtag Segmentor", command = ModelWindow.segment)
+        modelmenu2.add_command(label="Labels to Values", command = ModelWindow.labeltovalue)
         menubar.add_cascade(label="Pre-processing", menu = modelmenu2)
         
         newWindow.config(menu = menubar)
