@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.naive_bayes import MultinomialNB
 import pandas as pd
 import numpy as np
-from abstractmodel import AbstractModel
+from TextModels.abstractmodel import AbstractModel
 
 class NaiveBayes(AbstractModel):
 

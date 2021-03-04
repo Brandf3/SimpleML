@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import filedialog
-from naivebayes import NaiveBayes
-from svm import SVM
+from TextModels.naivebayes import NaiveBayes
+from TextModels.svm import SVM
 from Preprocessing.segment import Segmentor
 from Preprocessing.labeltovalue import LabelToValue
 

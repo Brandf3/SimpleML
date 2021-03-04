@@ -6,7 +6,7 @@ from sklearn import svm
 import pickle
 import pandas as pd
 import numpy as np
-from abstractmodel import AbstractModel
+from TextModels.abstractmodel import AbstractModel
 
 class SVM(AbstractModel):
 
